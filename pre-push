@@ -15,7 +15,7 @@ echo "Detected $SITE_CHANGES changes"
 if [ "$SITE_CHANGES" -gt "0" ]; then
   echo "Checking to make sure package version was updated..."
   
-  VERSION_CHANGED=$(git diff "$BRANCH".."$REMOTE" -G '"Version":' -- $REPO_ROOT/RainbowValley/manifest.json | wc -l)
+  VERSION_CHANGED=$(git diff "$BRANCH".."$REMOTE" -G '"Version":' -- $REPO_ROOT/<YOURPROJECTFOLDER>/manifest.json | wc -l)
   
   if [ "$VERSION_CHANGED" -gt "0" ]; then
     echo "Version was updated!  Continuing..."
